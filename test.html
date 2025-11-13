@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>   
+    <title>Feedback Form</title>
+    <style>
+         .feedback-form {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+
+    h2 {
+      text-align: center;
+      color: black;
+    }
+
+    .rating {
+      direction: rtl;
+      display: flex;
+      justify-content: center;
+      margin: 15px 0;
+    }
+
+    .rating input {
+      display: none;
+    }
+
+    .rating label {
+      font-size: 30px;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .rating input:checked ~ label {
+      color: gold;
+    }
+
+    .rating label:hover,
+    .rating label:hover ~ label {
+      color: gold;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+      margin-top: 10px;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      resize: none;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+    </style>
+</head>
+<body>
+
+<form action="#" method="post" align="center"></form>
+<h1>Feedback Form</h1>
+<div class="rating">
+    <input type="radio" name="star" id="star5" value="5">
+    <label for="star5">⭐</label>
+    <input type="radio" name="star" id="star4" value="4">
+    <label for="star4">⭐</label>
+    <input type="radio" name="star" id="star3" value="3">
+    <label for="star3">⭐</label>
+    <input type="radio" name="star" id="star2" value="2">
+    <label for="star">⭐</label>
+    <input type="radio" name="star" id="star1" value="1">
+    <label for="star1">⭐</label>
+</div>
+<textarea placeholder="Write your feedback area ........."></textarea>
+<button  type="submit" >Submit Feedback</button>  
+</form>
+</body>
+</html>
