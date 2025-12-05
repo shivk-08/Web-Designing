@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .base{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            height: 280px;
+            border: 2px solid black;
+            justify-content: center;
+            box-shadow: black;
+            
+        }
+        .inner{
+            margin-left: 10px;
+            margin-left: 10px;
+            margin-top: 2px;
+            display: flex;
+            border-radius: 10px;
+            width: 250px;
+            height: 230px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+            flex-direction: column;
+            text-align: center;
+        }
+        .circle{
+            border: 20px solid rgb(48, 48, 250);
+            border-radius: 50%;
+            background-color: rgb(48, 48, 250);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="base">
+        <div class="inner"><div class="circle">JK</div><p style="font-weight: bold;">Jeet Kumar</p><h1 style="font-size: small; font-weight: normal;">B.Tech - CSE<br>Roll no:21CS1007<br>1st Year</h1><p></div>
+        <div class="inner"><div class="circle">AR</div><p style="font-weight: bold;">Asha Rani</p><h1 style="font-size: small; font-weight: normal;">B.Tech - IT<br>Roll no:21IT1012<br>1st Year</h1><p></p></div>
+        <div class="inner"><div class="circle">RK</div><p style="font-weight: bold;">Rohit Kumar</p><h1 style="font-size: small; font-weight: normal;">B.Tech - ECE<br>Roll no:21EC1009<br>1st Year</h1><p></p></div>
+    </div>
+</body>
+</html>
