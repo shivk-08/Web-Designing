@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Cart 🛒</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #c9d5df;
+      color: black;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg,#0f172a,#1e3a8a);
+      padding: 14px;
+      text-align: center;
+    }
+
+    .navbar a {
+      color: #e0f2fe;
+      text-decoration: none;
+      margin: 0 16px;
+      font-weight: 600;
+    }
+
+    .navbar a:hover { color: #38bdf8; }
+
+    .header {
+      text-align: center;
+      padding: 25px 10px;
+      background-color: #fff;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header h1 {
+      font-size: 32px;
+      color: rgba(44, 42, 42, 0.918);
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;   
+      align-items: center;       
+      margin: 20px auto;
+      gap: 10px;         
+    }
+
+    .search-container input {
+     padding: 8px;
+     width: 600px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+    }
+
+    .search-container button {
+      padding: 8px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .search-container button:hover {
+      background-color: #0056b3;
+      transform: scale(1.1); 
+    }
+
+    .section {
+      width: 90%;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      padding: 10px 0;
+    }
+
+    .product {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 20px;
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin-bottom: 10px;
+    }
+
+    .price {
+      color: #e91e63;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      font-size: 14px;
+      background-color: rgba(165, 159, 88, 0.507);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .btn-group { margin-top: 12px; }
+
+    .btn {
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: transform 0.3s;
+    }
+
+    .btn:hover { transform: scale(1.05); }
+
+    .add-cart { background: #14b8a6; color: white; }
+    .buy-now { background: #fb7185; color: white; }
+
+    footer {
+      background: linear-gradient(90deg,#0f172a,#1e3a8a);
+      color: #fff;
+      margin-top: 30px;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    .student-info {
+      background-color: rgba(107, 107, 119, 0.692);
+      padding: 15px;
+      margin-top: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .product {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#laptop">Laptop</a>
+  <a href="#smartphone">Smartphone</a>
+  <a href="#tablets">Tablets</a>
+  <a href="#watches">Smart Watches</a>
+  <a href="#contact">Customer Care</a>
+</div>
+
+<div class="header" id="home">
+  <h1>Welcome to the Shopping Cart 🛒</h1>
+</div>
+
+<form class="search-container">
+  <input type="text" placeholder="Search products..." />
+  <button type="submit">Search</button>
+</form>
+
+<section class="section" id="laptop">
+<h2>💻 Laptops</h2>
+
+<div class="product">
+<img src="https://p1-ofp.static.pub/medias/26022716142_ThinkBook14G6IRL_202309141142381752581928566.png">
+<div>
+<h3>ThinkBook 14 - Intel i7, 16GB RAM, 512GB SSD</h3>
+        <p class="price">₹72,390</p>
+        <pre>Processor: 13th Generation Intel® Core™ i7-1355U Processor (E-cores up to 3.70 GHz P-cores up to 5.00 GHz)
+Operating System: Windows 11 Pro
+Graphic Card: Integrated Intel® UHD Graphic                 
+Memory: 16 GB DDR5-5200MT/s (SODIMM)
+Storage: 512 GB SSD M.2 2242 PCIe Gen4 TLC</pre>
+<div class="btn-group">
+<button class="btn add-cart">Add to Cart</button>
+<button class="btn buy-now">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="product">
+<img src="https://p1-ofp.static.pub/medias/26050595576_LOQ15IRX9WHBKLTLunaGreyIMG_202309261024281728324087866.png">
+<div>
+<h3>Lenovo LOQ Gen 9 - AMD Ryzen 5</h3>
+        <p class="price">₹65,490</p> 
+        <pre>Processor: AMD Ryzen™ 5 7235HS Processor (3.20 GHz up to 4.20 GHz)
+Operating System: Windows 11 Home Single Language 64
+Graphic Card: NVIDIA® GeForce RTX™ 3050 Laptop GPU 6GB GDDR6
+Memory: 24 GB DDR5-4800MT/s (SODIMM)(2 x 12 GB)
+Storage: 512 GB SSD M.2 2242 PCIe Gen4 QLC</pre>
+<div class="btn-group">
+<button class="btn add-cart">Add to Cart</button>
+<button class="btn buy-now">Buy Now</button>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="smartphone">
+<h2>📱 Smartphones</h2>
+
+<div class="product">
+<img src="https://m.media-amazon.com/images/I/61Io5-ojWUL._SX569_.jpg">
+<div>
+<h3>OnePlus Nord CE4 Lite 5G</h3>
+        <p class="price">₹15,999</p>
+        <pre>Brand:	OnePlus
+Operating System:	OxygenOS
+RAM Memory Installed Size:	8 GB
+CPU Model:	Snapdragon
+CPU Speed:	2.2 GHz</pre>
+<div class="btn-group">
+<button class="btn add-cart">Add to Cart</button>
+<button class="btn buy-now">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="product">
+<img src="https://m.media-amazon.com/images/I/41X9qNxoJKL._SY300_SX300_QL70_FMwebp_.jpg">
+<div>
+<h3>Samsung Galaxy S24 Ultra 5G AI Smartphone with Galaxy AI (Titanium Gray, 12GB, 512GB Storage), Snapdragon 8 Gen 3, 200 MP Camera with ProVisual Engine and 5000mAh Battery</h3>
+        <p class="price">₹85,999</p>
+        <pre>Brand:	Samsung
+Operating System:	Android 10.0
+RAM Memory Installed Size:	12 GB
+CPU Model:	Snapdragon 8 Gen3
+CPU Speed:	3.39 GHz</pre>
+<div class="btn-group">
+<button class="btn add-cart">Add to Cart</button>
+<button class="btn buy-now">Buy Now</button>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="tablets">
+<h2>📱 Tablets</h2>
+
+<div class="product">
+<img src="https://m.media-amazon.com/images/I/41lZevqa8sL._SY300_SX300_QL70_FMwebp_.jpg">
+<div>
+<h3>Samsung Galaxy Tab S9 FE [Smartchoice], RAM 6 GB, ROM 128 GB Expandable, S Pen in-Box, Wi-Fi, IP68 Tablet, Gray</h3>
+       <p class="price">₹26,999</p>
+       <pre>Brand	Samsung
+Model Name: Galaxy Tab S9 FE
+Memory Storage Capacity:	128 GB
+Screen Size:	27.69 Centimetres
+Display Resolution: Maximum	2304 x 1440 (WQXGA) Pixels</pre>
+<div class="btn-group">
+<button class="btn add-cart">Add to Cart</button>
+<button class="btn buy-now">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="product">
+<img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR02nnWKGohfTdAy3mrI-_PloHnFpvRktLB-WyS0w_jlXv1MJ_Jh57WlNwtZ6wn6B6oCBM1um59-6PZAO8VsFOPlw5w99aWSo0qv2e5L6M3MWcIoEtEixOMTQ">
+<div>
+<h3>MOTOROLA Pad 60 Pro 12 GB RAM 256 GB ROM 12.7 inch with Wi-Fi Only Gaming Tablet (PANTONE Bronze Green)</h3>
+         <p class="price">₹24,999</p>
+         <pre>12 GB RAM | 256 GB ROM | Expandable Upto 1 TB
+32.26 cm (12.7 inch) Display
+13 MP Primary Camera | 8 MP Front
+Android Android 14 | Battery: 10200 mAh
+Ideal Usage: Art & Design, Business, Entertainment, High Processing Tasks, Reading and Browsing
+Processor: MediaTek Dimensity 8300</pre>
+<div class="btn-group">
+<button class="btn add-cart">Add to Cart</button>
+<button class="btn buy-now">Buy Now</button>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="watches">
+<h2>⌚ Smart Watches</h2>
+
+<div class="product">
+<img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTVPfO-JJH1nyXbHNIceZPB1Ry5YTYjnYkf5_q1m1B8UouQpJtGc4rcAWz3LX7Fn-T96CDfA1XCkSkqppQwMTvwORMVikfCgRRcLO6-0m5plQxnf8PfBJNNfw">
+<div>
+<h3>Noise Pulse 2 Max 1.85" Display, Bluetooth Calling Smart Watch, 10 Days Battery, 550 NITS Brightness, Smart DND, 100 Sports Modes, Smartwatch for Men and Women (Midnight Blue)</h3>
+        <p class="price">₹1,999</p>
+        <pre>Operating System	manual
+Memory Storage Capacity: 256 GB
+Special Features:	Heart Rate, Blood Oxygen, Sleep Tracking, Activity Tracking, Breathing
+Battery Capacity:	210 Milliamp Hours
+Connectivity Technology: Bluetooth</pre>
+<div class="btn-group">
+<button class="btn add-cart">Add to Cart</button>
+<button class="btn buy-now">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="product">
+<img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR2jptTussSbds7JrYlMP1yQ_O0SZJ2669z1M4PpAHoxSP58GMp0k9doY6XnxhWckDwyTCd8LEAWEGSctZe-rZA67Z8WeBhdfLq_dEi64ofG6LYkBN1qPSTQg">
+<div>
+<h3>GOBOULT (previously Boult) Drift+ 1.85" ,BT Calling, 500Nits Brightness, 150+ Watchfaces Smartwatch  (Jet Black Strap, Free Size)</h3>
+        <p class="price">₹1,899</p>
+        <pre>Operating System	manual
+Memory Storage Capacity:	256 GB
+Special Feature:	Heart Rate, Blood Oxygen, Sleep Tracking, Activity Tracking, Breathing
+Battery Capacity:	210 Milliamp Hours
+Connectivity Technology:	Bluetooth</pre>
+<div class="btn-group">
+<button class="btn add-cart">Add to Cart</button>
+<button class="btn buy-now">Buy Now</button>
+</div>
+</div>
+</div>
+</section>
+
+<footer id="contact">
+    <p><b>Contact Us</b></p>
+    <p>Email: shoppingmart123@gmail.com</p>
+    <p>Instagram: shopping_mart_123</p>
+    <p>Phone: 928629XXXX</p>
+  </footer> 
+
+<div class="student-info">
+    <p>Name: Shiv Kumar</p>
+    <p>Admission Number: 2025B01010693</p>
+  </div>
+
+</body>
+</html>
